@@ -1,0 +1,17 @@
+{
+  "name": "rngWL",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "scripts": {
+    "postinstall": "cp nm_files/native_modules.gradle node_modules/@react-native-community/cli-platform-android/ && npx jetify",
+    "web": "yarn workspace web start",
+    "mobile": "yarn workspace mobile start",
+    "wbuild": "yarn workspace web build",
+    "lint":   "eslint "
+  }
+}
